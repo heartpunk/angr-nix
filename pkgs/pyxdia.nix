@@ -21,13 +21,11 @@ let
   blinkVersion = "dev-98f95e8";
   blinkPlatforms = {
     "darwin-arm64" = "sha256-vgTU+ibDS2rCYeOcZXV8BmaF9KWPlc3q9oG8Xn32iww=";
-    "darwin-x86_64" = lib.fakeHash;
     "linux-aarch64" = "sha256-WqB4ypb8LM1g7EwT3eD2iKoHo2sYlrkc+AXsoyR3mq0=";
   };
   blinkPlatform =
     if stdenv.hostPlatform.isDarwin && stdenv.hostPlatform.isAarch64 then "darwin-arm64"
-    else if stdenv.hostPlatform.isDarwin && stdenv.hostPlatform.isx86_64 then "darwin-x86_64"
-    else if stdenv.hostPlatform.isLinux && stdenv.hostPlatform.isAarch64 then "linux-aarch64"
+else if stdenv.hostPlatform.isLinux && stdenv.hostPlatform.isAarch64 then "linux-aarch64"
     else null;
   needsBlink = blinkPlatform != null;
   blinkTgz = lib.optionalAttrs needsBlink (fetchurl {

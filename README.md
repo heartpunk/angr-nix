@@ -65,7 +65,6 @@ These packages are not in nixpkgs and are built by this flake:
 - `x86_64-linux` — CI tested
 - `aarch64-linux` — CI tested
 - `aarch64-darwin` — CI tested
-- `x86_64-darwin` — builds defined, no CI (GitHub retired Intel macOS runners)
 
 ## Version pins relaxed
 
