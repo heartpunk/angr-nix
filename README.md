@@ -17,11 +17,21 @@ nix develop github:heartpunk/angr-nix
 python -c "import angr; p = angr.Project('/bin/ls', auto_load_libs=False); print(p.arch)"
 ```
 
+### From FlakeHub
+
+```bash
+nix run "https://flakehub.com/f/heartpunk/angr-nix/*" -- -c "import angr; print(angr.__version__)"
+```
+
 ### As a flake input
 
 ```nix
 {
+  # From GitHub
   inputs.angr-nix.url = "github:heartpunk/angr-nix";
+
+  # Or from FlakeHub (with semver)
+  # inputs.angr-nix.url = "https://flakehub.com/f/heartpunk/angr-nix/*";
 
   outputs = { self, nixpkgs, angr-nix }: {
     # Use the overlay
@@ -52,8 +62,10 @@ These packages are not in nixpkgs and are built by this flake:
 
 ## Platforms
 
-- `x86_64-linux` — tested
-- `aarch64-darwin` — builds defined, pending DNS fix on test machine
+- `x86_64-linux` — CI tested
+- `aarch64-linux` — CI tested
+- `aarch64-darwin` — CI tested
+- `x86_64-darwin` — builds defined, no CI (GitHub retired Intel macOS runners)
 
 ## Version pins relaxed
 
