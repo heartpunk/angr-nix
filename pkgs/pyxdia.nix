@@ -22,7 +22,7 @@ let
   blinkPlatforms = {
     "darwin-arm64" = "sha256-vgTU+ibDS2rCYeOcZXV8BmaF9KWPlc3q9oG8Xn32iww=";
     "darwin-x86_64" = lib.fakeHash;
-    "linux-aarch64" = lib.fakeHash;
+    "linux-aarch64" = "sha256-WqB4ypb8LM1g7EwT3eD2iKoHo2sYlrkc+AXsoyR3mq0=";
   };
   blinkPlatform =
     if stdenv.hostPlatform.isDarwin && stdenv.hostPlatform.isAarch64 then "darwin-arm64"
