@@ -37,18 +37,3 @@ jobs:
           print('arch:', p.arch)
           print('entry:', hex(p.entry))
           "
-
-  publish:
-    needs: build
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-    permissions:
-      id-token: write
-      contents: read
-    steps:
-      - uses: actions/checkout@v4
-      - uses: DeterminateSystems/nix-installer-action@main
-      - uses: DeterminateSystems/flakehub-push@main
-        with:
-          rolling: true
-          visibility: "public"
