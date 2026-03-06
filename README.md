@@ -63,4 +63,4 @@ These packages are not in nixpkgs and are built by this flake:
 
 ## License
 
-GPL-3.0
+MIT
