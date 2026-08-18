@@ -22,6 +22,7 @@
             pyvex = pfinal.callPackage ./pkgs/pyvex.nix { };
             claripy = pfinal.callPackage ./pkgs/claripy.nix { };
             cle = pfinal.callPackage ./pkgs/cle.nix { };
+            lmdb = pfinal.callPackage ./pkgs/lmdb.nix { lmdb = final.lmdb; };
             angr = pfinal.callPackage ./pkgs/angr.nix { };
           };
         };

@@ -36,18 +36,18 @@
 
 buildPythonPackage rec {
   pname = "angr";
-  version = "9.2.204";
+  version = "9.2.214";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-Io9BLL/ru6XXodD4sC6KV/xBhZ5ESPqNaQe5gAR8yL8=";
+    hash = "sha256-umCAv9Gxz1/LNFCMbV4XSq5PgkFsJdwodI3I5UJtiRU=";
   };
 
   cargoDeps = rustPlatform.fetchCargoVendor {
     inherit src;
     name = "${pname}-${version}";
-    hash = "sha256-eO/Ap1cBncA5OhkWIeAol7TCyJ8LhQBkHXnr9RpcFCo=";
+    hash = "sha256-WPMBFVb+D8eWkF25doTYcFM7s8XRgkoaHXL0rtLwoqk=";
   };
 
   build-system = [

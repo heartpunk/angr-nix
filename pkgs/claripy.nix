@@ -11,12 +11,12 @@
 
 buildPythonPackage rec {
   pname = "claripy";
-  version = "9.2.204";
+  version = "9.2.214";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-FaidFgkeZTJrA0WzA3Vjo7XisxB2+FNaNlOaW7DQjAI=";
+    hash = "sha256-dznzcQWI49XyyxAJtqwc9QxbR9Su6V0vHYZZwl5H8Co=";
   };
 
   build-system = [ setuptools ];
