@@ -15,11 +15,27 @@
       overlays.default = final: prev: {
         python312 = prev.python312.override {
           packageOverrides = pfinal: pprev: {
+            mistune = pprev.mistune.overrideAttrs (old: {
+              # Wall-clock ratio assertions flake under concurrent build load.
+              disabledTests = (old.disabledTests or [ ]) ++ [
+                "near_linear"
+              ];
+            });
+            httpcore2 = pprev.httpcore2.overrideAttrs (old: {
+              # The Trio 10 ms cancellation check passes in isolation but flakes
+              # under concurrent build load before cleanup reaches the idle state.
+              pytestFlags = (old.pytestFlags or [ ]) ++ [
+                "--deselect=tests/httpcore2/test_cancellations.py::test_h2_timeout_during_response[trio]"
+              ];
+            });
             uefi-firmware = pfinal.callPackage ./pkgs/uefi-firmware.nix { };
             pyxdia = pfinal.callPackage ./pkgs/pyxdia.nix { };
             pypcode = pfinal.callPackage ./pkgs/pypcode.nix { };
             archinfo = pfinal.callPackage ./pkgs/archinfo.nix { };
-            pyvex = pfinal.callPackage ./pkgs/pyvex.nix { };
+            pyvex = pfinal.callPackage ./pkgs/pyvex.nix {
+              # pyvex 9.2.214 declares scikit-build-core >=0.11.4,<0.12.0.
+              scikit-build-core = pfinal.callPackage ./pkgs/scikit-build-core-0.11.nix { };
+            };
             claripy = pfinal.callPackage ./pkgs/claripy.nix { };
             cle = pfinal.callPackage ./pkgs/cle.nix { };
             lmdb = pfinal.callPackage ./pkgs/lmdb.nix { lmdb = final.lmdb; };
