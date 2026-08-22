@@ -44,6 +44,21 @@
         };
       };
 
+      checks = forAllSystems (
+        system:
+        let
+          pkgs = import nixpkgs {
+            inherit system;
+            overlays = [ self.overlays.default ];
+          };
+        in
+        {
+          scikit-build-core = pkgs.python312Packages.callPackage ./pkgs/scikit-build-core-0.11.nix {
+            runTests = true;
+          };
+        }
+      );
+
       packages = forAllSystems (
         system:
         let
