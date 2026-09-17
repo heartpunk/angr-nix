@@ -2,22 +2,22 @@
   lib,
   stdenv,
   buildPythonPackage,
-  fetchPypi,
+  fetchurl,
   autoPatchelfHook,
 }:
 
 let
   wheels = {
     x86_64-linux = {
-      platform = "manylinux_2_27_x86_64";
+      url = "https://files.pythonhosted.org/packages/34/de/30329041d9a2dda11308576a80b5db17060e4b03a7ba7f550437fb38dd6b/z3_solver-5.1.0.0-py3-none-manylinux_2_27_x86_64.whl";
       hash = "sha256-362eMJ1wELH/a9sz8hVwoWA+9HJzcyIccRenREjwz+8=";
     };
     aarch64-linux = {
-      platform = "manylinux_2_38_aarch64";
+      url = "https://files.pythonhosted.org/packages/ec/49/7db70c39fefde52eb5571ae709fa370260536439082d36b9ed1ab36bd1a0/z3_solver-5.1.0.0-py3-none-manylinux_2_38_aarch64.whl";
       hash = "sha256-Hc/My0sCeVHXrfJntbI256Z7hDPMNY2ALcsCgBUVh78=";
     };
     aarch64-darwin = {
-      platform = "macosx_13_0_arm64";
+      url = "https://files.pythonhosted.org/packages/01/9a/cdb6db09d6aff6a803a94505aa24666db5e47df7aad0f2b1b0ddcb52ed12/z3_solver-5.1.0.0-py3-none-macosx_13_0_arm64.whl";
       hash = "sha256-OZo4qF14QQXl31oFwEpYFIG/24CvdCR3nPdvqEO05mw=";
     };
   };
@@ -31,13 +31,8 @@ buildPythonPackage rec {
 
   # angr's Rust extension and Python bindings must load this same libz3;
   # preserve the upstream z3/lib layout expected by angr._z3.library_dir.
-  src = fetchPypi {
-    pname = "z3_solver";
-    inherit version;
-    inherit (wheel) platform hash;
-    format = "wheel";
-    python = "py3";
-    abi = "none";
+  src = fetchurl {
+    inherit (wheel) url hash;
   };
 
   nativeBuildInputs = lib.optionals stdenv.isLinux [ autoPatchelfHook ];
