@@ -3,21 +3,22 @@
   buildPythonPackage,
   fetchPypi,
   setuptools,
+  setuptools-scm,
   future,
 }:
 
 buildPythonPackage rec {
   pname = "uefi-firmware";
-  version = "1.11";
+  version = "1.16";
   pyproject = true;
 
   src = fetchPypi {
     pname = "uefi_firmware";
     inherit version;
-    hash = "sha256-MOKp0TisFgi9/BeDqTaTHrb0KScjkZ8dssFQnsGKYEE=";
+    hash = "sha256-Fia5kwsQBvnsELde+In/wXxjLgtDpKugehCQ2QIxM+o=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [ setuptools setuptools-scm ];
 
   dependencies = [ future ];
 

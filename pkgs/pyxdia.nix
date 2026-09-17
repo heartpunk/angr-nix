@@ -11,12 +11,12 @@
 
 let
   xdiaZip = fetchurl {
-    url = "https://github.com/mborgerson/xdia/releases/download/v0.1.0/xdia.zip";
-    hash = "sha256-rtKcSZoL8OUo2l1B/WJYACIu+DFEqahfTvbjeNsmq8s=";
+    url = "https://github.com/mborgerson/xdia/releases/download/v0.1.1/xdia.zip";
+    hash = "sha256-SDd4JR4NKw6imD0IARynX0tLPN1dao0Ompea6dJSoGo=";
   };
   xdialdrTarXz = fetchurl {
-    url = "https://github.com/mborgerson/xdia/releases/download/v0.1.0/xdialdr.tar.xz";
-    hash = "sha256-rXL7uVl+TJYYhKrqzkF7YK0nZ+rwSnGKsTyxAN/mlYQ=";
+    url = "https://github.com/mborgerson/xdia/releases/download/v0.1.1/xdialdr.tar.xz";
+    hash = "sha256-s2595p3bbASfKNwlvDkHg8w3ZCm9j2c9HztPD1sOtuE=";
   };
   blinkVersion = "dev-98f95e8";
   blinkPlatforms = {
@@ -36,12 +36,12 @@ in
 
 buildPythonPackage rec {
   pname = "pyxdia";
-  version = "0.1.0";
+  version = "0.1.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-r5XRznBAfnoPctArp302bA37DtWPszb4clrI80k7fmg=";
+    hash = "sha256-AyQlPu/KRlWj8rC4VayE+COKJT2XWzPkAbzXsjsED1o=";
   };
 
   build-system = [

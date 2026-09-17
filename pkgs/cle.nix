@@ -3,7 +3,6 @@
   buildPythonPackage,
   fetchPypi,
   setuptools,
-  pythonRelaxDepsHook,
   archinfo,
   pyvex,
   pyxdia,
@@ -11,7 +10,6 @@
   pyelftools,
   pefile,
   sortedcontainers,
-  cachetools,
   minidump,
   pyxbe,
   arpy,
@@ -30,10 +28,6 @@ buildPythonPackage rec {
 
   build-system = [ setuptools ];
 
-  nativeBuildInputs = [ pythonRelaxDepsHook ];
-
-  # arpy in nixpkgs is 2.3.0, cle pins ==1.1.1
-  pythonRelaxDeps = [ "arpy" ];
 
   dependencies = [
     archinfo
@@ -43,7 +37,6 @@ buildPythonPackage rec {
     pyelftools
     pefile
     sortedcontainers
-    cachetools
     minidump
     pyxbe
     arpy

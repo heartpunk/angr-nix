@@ -30,6 +30,8 @@
             });
             uefi-firmware = pfinal.callPackage ./pkgs/uefi-firmware.nix { };
             pyxdia = pfinal.callPackage ./pkgs/pyxdia.nix { };
+            arpy = pfinal.callPackage ./pkgs/arpy.nix { };
+            pydemumble = pfinal.callPackage ./pkgs/pydemumble.nix { };
             pypcode = pfinal.callPackage ./pkgs/pypcode.nix { };
             archinfo = pfinal.callPackage ./pkgs/archinfo.nix { };
             pyvex = pfinal.callPackage ./pkgs/pyvex.nix { };
