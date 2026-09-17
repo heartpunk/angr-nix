@@ -50,6 +50,7 @@ let
   wheel = wheels.${stdenv.hostPlatform.system}
     or (throw "angr 10.0.0 has no packaged wheel for ${stdenv.hostPlatform.system}");
   z3LibraryDir = "${z3-solver}/${python.sitePackages}/z3/lib";
+  pyvexLibraryDir = "${pyvex}/${python.sitePackages}/pyvex/lib";
 in
 buildPythonPackage rec {
   pname = "angr";
@@ -67,6 +68,8 @@ buildPythonPackage rec {
   buildInputs = [ stdenv.cc.cc.lib ];
   preFixup = lib.optionalString stdenv.isLinux ''
     addAutoPatchelfSearchPath "${z3LibraryDir}"
+    # unicornlib.so needs libpyvex.so, which pyvex ships in its Python lib dir.
+    addAutoPatchelfSearchPath "${pyvexLibraryDir}"
   '' + lib.optionalString stdenv.isDarwin ''
     install_name_tool -change libz3.dylib "${z3LibraryDir}/libz3.dylib" \
       "$out/${python.sitePackages}/angr/rustylib.abi3.so"
