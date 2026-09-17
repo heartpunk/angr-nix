@@ -1,5 +1,5 @@
 {
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs/e7a3ca8092b61ff85b6a45bf863ea2b2d6a661b3";
 
   outputs =
     { self, nixpkgs }:
@@ -32,11 +32,10 @@
             pyxdia = pfinal.callPackage ./pkgs/pyxdia.nix { };
             pypcode = pfinal.callPackage ./pkgs/pypcode.nix { };
             archinfo = pfinal.callPackage ./pkgs/archinfo.nix { };
-            pyvex = pfinal.callPackage ./pkgs/pyvex.nix {
-              # pyvex 9.2.214 declares scikit-build-core >=0.11.4,<0.12.0.
-              scikit-build-core = pfinal.callPackage ./pkgs/scikit-build-core-0.11.nix { };
-            };
-            claripy = pfinal.callPackage ./pkgs/claripy.nix { };
+            pyvex = pfinal.callPackage ./pkgs/pyvex.nix { };
+            angr-data = pfinal.callPackage ./pkgs/angr-data.nix { };
+            capstone = pfinal.callPackage ./pkgs/capstone.nix { };
+            z3-solver = pfinal.callPackage ./pkgs/z3-solver.nix { };
             cle = pfinal.callPackage ./pkgs/cle.nix { };
             lmdb = pfinal.callPackage ./pkgs/lmdb.nix { lmdb = final.lmdb; };
             angr = pfinal.callPackage ./pkgs/angr.nix { };

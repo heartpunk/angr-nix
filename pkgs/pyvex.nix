@@ -7,17 +7,16 @@
   ninja,
   cffi,
   bitstring,
-  archinfo,
 }:
 
 buildPythonPackage rec {
   pname = "pyvex";
-  version = "9.2.214";
+  version = "10.0.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-Ti4SIN6LjLFj2OUAyOtuypZBhNeK7605JSZIjN+2RBY=";
+    hash = "sha256-+09qhcxqFi26pz8OFzQPMq7Mz8yc6wgSIWjSo/3q3+U=";
   };
 
   build-system = [
@@ -30,7 +29,6 @@ buildPythonPackage rec {
   dependencies = [
     cffi
     bitstring
-    archinfo
   ];
 
   dontUseCmakeConfigure = true;

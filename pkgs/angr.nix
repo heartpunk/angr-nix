@@ -1,16 +1,14 @@
 {
   lib,
+  stdenv,
   buildPythonPackage,
   fetchPypi,
-  setuptools,
-  setuptools-rust,
-  pythonRelaxDepsHook,
-  rustPlatform,
-  cargo,
-  rustc,
+  python,
+  autoPatchelfHook,
+  darwin,
+  angr-data,
   archinfo,
   pyvex,
-  claripy,
   cle,
   pypcode,
   capstone,
@@ -22,54 +20,66 @@
   psutil,
   cffi,
   pycparser,
+  platformdirs,
   rich,
   gitpython,
   lmdb,
-  pycryptodome,
   mulpyplexer,
   msgspec,
   pydemumble,
   typing-extensions,
   cxxheaderparser,
-  gnumake,
+  z3-solver,
 }:
 
+let
+  wheels = {
+    x86_64-linux = {
+      platform = "manylinux_2_28_x86_64";
+      hash = "sha256-r6bH0NbKrlO/WBwasaTMbyEpq83ZhwaJvA0ws7K1sYM=";
+    };
+    aarch64-linux = {
+      platform = "manylinux_2_28_aarch64";
+      hash = "sha256-lLBdpFqn9GMijJh7YC+kLBBa7XWmK9oYMRHnXApDCIQ=";
+    };
+    aarch64-darwin = {
+      platform = "macosx_11_0_arm64";
+      hash = "sha256-no0NolXAdFnmL4Y+RLPTkhivkOqFhGn3/M3/89gvGzk=";
+    };
+  };
+  wheel = wheels.${stdenv.hostPlatform.system}
+    or (throw "angr 10.0.0 has no packaged wheel for ${stdenv.hostPlatform.system}");
+  z3LibraryDir = "${z3-solver}/${python.sitePackages}/z3/lib";
+in
 buildPythonPackage rec {
   pname = "angr";
-  version = "9.2.214";
-  pyproject = true;
+  version = "10.0.0";
+  format = "wheel";
 
+  # Upstream's ABI3 wheel includes the Rust claripy/AIL/icicle extension and
+  # unicornlib. Keep the existing three-platform support explicit.
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-umCAv9Gxz1/LNFCMbV4XSq5PgkFsJdwodI3I5UJtiRU=";
+    inherit (wheel) platform hash;
+    format = "wheel";
+    python = "cp312";
+    abi = "abi3";
   };
 
-  cargoDeps = rustPlatform.fetchCargoVendor {
-    inherit src;
-    name = "${pname}-${version}";
-    hash = "sha256-WPMBFVb+D8eWkF25doTYcFM7s8XRgkoaHXL0rtLwoqk=";
-  };
-
-  build-system = [
-    setuptools
-    setuptools-rust
-  ];
-
-  nativeBuildInputs = [
-    pythonRelaxDepsHook
-    rustPlatform.cargoSetupHook
-    cargo
-    rustc
-    gnumake
-  ];
-
-  # capstone: nixpkgs 5.0.7 vs pinned 5.0.6
-  pythonRelaxDeps = [ "capstone" ];
+  nativeBuildInputs = lib.optionals stdenv.isLinux [ autoPatchelfHook ]
+    ++ lib.optionals stdenv.isDarwin [ darwin.cctools ];
+  buildInputs = [ stdenv.cc.cc.lib ];
+  preFixup = lib.optionalString stdenv.isLinux ''
+    addAutoPatchelfSearchPath "${z3LibraryDir}"
+  '' + lib.optionalString stdenv.isDarwin ''
+    install_name_tool -change libz3.dylib "${z3LibraryDir}/libz3.dylib" \
+      "$out/${python.sitePackages}/angr/rustylib.abi3.so"
+  '';
 
   dependencies = [
+    angr-data
     archinfo
     pyvex
-    claripy
     cle
     pypcode
     capstone
@@ -81,22 +91,24 @@ buildPythonPackage rec {
     psutil
     cffi
     pycparser
+    platformdirs
     rich
     gitpython
     lmdb
-    pycryptodome
     mulpyplexer
     msgspec
     pydemumble
     typing-extensions
     cxxheaderparser
+    z3-solver
   ];
 
-  pythonImportsCheck = [ "angr" ];
+  pythonImportsCheck = [ "angr" "angr.claripy" "angr.rustylib" ];
 
   meta = {
     description = "A powerful and user-friendly binary analysis platform";
     homepage = "https://github.com/angr/angr";
     license = lib.licenses.bsd2;
+    platforms = builtins.attrNames wheels;
   };
 }

@@ -7,12 +7,12 @@
 
 buildPythonPackage rec {
   pname = "archinfo";
-  version = "9.2.214";
+  version = "10.0.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-Qjx6h9/78DlZa4yA04KO6DokZfsgVveQ6x4WlgXS2rc=";
+    hash = "sha256-jgAGx35CJm9b1xm3wa1RFu1g8BjJlr0Rwf6JNj60Pjw=";
   };
 
   build-system = [ setuptools ];

@@ -20,12 +20,12 @@
 
 buildPythonPackage rec {
   pname = "cle";
-  version = "9.2.214";
+  version = "10.0.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-VFjG0wygjG3zPto8u8RXvXA4lPEuKt2gK3fyPhvoINE=";
+    hash = "sha256-Rhjs8xGZIr/ZiD37/Zo5sLBUp7OQgxwxbSAXLzu6m/M=";
   };
 
   build-system = [ setuptools ];
