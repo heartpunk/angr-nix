@@ -238,5 +238,25 @@
         "hash": "sha256-OZo4qF14QQXl31oFwEpYFIG/24CvdCR3nPdvqEO05mw="
       }
     }
+  },
+  "uefi-firmware": {
+    "version": "1.16",
+    "platforms": {
+      "x86_64-linux": {
+        "url": "https://files.pythonhosted.org/packages/ee/97/e85ff57771224998d0073edaf107276f231022e8d953c88d8320e60b05a3/uefi_firmware-1.16-cp310-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+        "name": "uefi_firmware-1.16-cp310-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+        "hash": "sha256-1GIRd+qu161XjD9e9MdaUTzBvnEXFQ8XZMMzYQUGAxQ="
+      },
+      "aarch64-linux": {
+        "url": "https://files.pythonhosted.org/packages/82/95/f4b963979a371476fcf45acbce298a44301a8f44a23640190e80e96042f0/uefi_firmware-1.16-cp310-abi3-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+        "name": "uefi_firmware-1.16-cp310-abi3-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+        "hash": "sha256-vGcU2J8ZImmSPzH/hzfUdVUXe4wZ5pg3oikfaEYquSo="
+      },
+      "aarch64-darwin": {
+        "url": "https://files.pythonhosted.org/packages/e3/aa/22d714046b65b64a238d701fa1737b6966a75bb999486f03bc223c08afe2/uefi_firmware-1.16-cp310-abi3-macosx_11_0_arm64.whl",
+        "name": "uefi_firmware-1.16-cp310-abi3-macosx_11_0_arm64.whl",
+        "hash": "sha256-SGjuxCYCfydcJnAS/eXtC26V9AdflewhJ3ZEr3hYSfc="
+      }
+    }
   }
 }
