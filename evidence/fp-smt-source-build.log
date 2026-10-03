@@ -1,0 +1,7 @@
+evaluation warning: stdenv.isLinux is deprecated, use stdenv.hostPlatform.isLinux instead
+these 2 derivations will be built:
+  /nix/store/sj70d0disx5gywhn4cac85388bhlb66c-python3.12-angr-data-0.1.1.drv
+  /nix/store/ylf3vgnpfqk2dxpv9dxfcwy5nk017ald-python3.12-angr-10.0.1.drv
+building '/nix/store/sj70d0disx5gywhn4cac85388bhlb66c-python3.12-angr-data-0.1.1.drv'...
+building '/nix/store/ylf3vgnpfqk2dxpv9dxfcwy5nk017ald-python3.12-angr-10.0.1.drv'...
+/nix/store/82wnvxcwpl6j25l3frqx2al4l3908fyq-python3.12-angr-10.0.1
