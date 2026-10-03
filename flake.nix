@@ -40,7 +40,7 @@
             cle = pfinal.callPackage ./pkgs/cle.nix { };
             lmdb = pfinal.callPackage ./pkgs/lmdb.nix { lmdb = final.lmdb; };
             angr = pfinal.callPackage ./pkgs/angr.nix { };
-          };
+          } // import ./pkgs/release-wheels.nix { inherit final pfinal pprev; };
         };
       };
 
