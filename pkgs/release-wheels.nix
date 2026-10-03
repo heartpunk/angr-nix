@@ -19,6 +19,7 @@ let
       pythonImportsCheck = [ importName ];
     };
 in {
+  markdown-it-py = wheel "markdown-it-py" [ pfinal.mdurl ] "markdown_it";
   bitstring = wheel "bitstring" [ pfinal.bitarray ] "bitstring";
   networkx = wheel "networkx" [] "networkx";
   sympy = wheel "sympy" [ pfinal.mpmath ] "sympy";
