@@ -19,6 +19,7 @@ let
       pythonImportsCheck = [ importName ];
     };
 in {
+  mpmath = wheel "mpmath" [] "mpmath";
   cffi = wheel "cffi" [ pfinal.pycparser ] "cffi";
   archinfo = wheel "archinfo" [] "archinfo";
   pyvex = wheel "pyvex" [ pfinal.cffi pfinal.bitstring ] "pyvex";

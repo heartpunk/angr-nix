@@ -278,5 +278,25 @@
         "hash": "sha256-jsoqgTwct61Pt002jC/7u0eJ03fuW7jfmDc8LMDe52w="
       }
     }
+  },
+  "mpmath": {
+    "version": "1.3.0",
+    "platforms": {
+      "x86_64-linux": {
+        "url": "https://files.pythonhosted.org/packages/43/e3/7d92a15f894aa0c9c4b49b8ee9ac9850d6e63b03c9c32c0367a13ae62209/mpmath-1.3.0-py3-none-any.whl",
+        "name": "mpmath-1.3.0-py3-none-any.whl",
+        "hash": "sha256-oLK5/oC7zYGmZH/xMQhzjPtILUgdgmzA4C9bNeXIjSw="
+      },
+      "aarch64-linux": {
+        "url": "https://files.pythonhosted.org/packages/43/e3/7d92a15f894aa0c9c4b49b8ee9ac9850d6e63b03c9c32c0367a13ae62209/mpmath-1.3.0-py3-none-any.whl",
+        "name": "mpmath-1.3.0-py3-none-any.whl",
+        "hash": "sha256-oLK5/oC7zYGmZH/xMQhzjPtILUgdgmzA4C9bNeXIjSw="
+      },
+      "aarch64-darwin": {
+        "url": "https://files.pythonhosted.org/packages/43/e3/7d92a15f894aa0c9c4b49b8ee9ac9850d6e63b03c9c32c0367a13ae62209/mpmath-1.3.0-py3-none-any.whl",
+        "name": "mpmath-1.3.0-py3-none-any.whl",
+        "hash": "sha256-oLK5/oC7zYGmZH/xMQhzjPtILUgdgmzA4C9bNeXIjSw="
+      }
+    }
   }
 }
