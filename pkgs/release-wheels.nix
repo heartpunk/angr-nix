@@ -25,6 +25,7 @@ in {
     nativeBuildInputs = [ pprev.pythonRelaxDepsHook ];
     pythonRelaxDeps = [ "arpy" ];
   };
+  uefi-firmware = wheel "uefi-firmware" [ pfinal.future ] "uefi_firmware";
   angr-data = wheel "angr-data" [] "angr_data";
   pypcode = wheel "pypcode" [] "pypcode";
   capstone = wheel "capstone" [] "capstone";
