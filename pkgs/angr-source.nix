@@ -7,6 +7,7 @@
   rustPlatform,
   cargo,
   rustc,
+  angr-data,
   archinfo,
   pyvex,
   cle,
@@ -77,6 +78,7 @@ buildPythonPackage rec {
   '';
 
   dependencies = [
+    angr-data
     archinfo
     pyvex
     cle
