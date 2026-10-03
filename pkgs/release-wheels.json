@@ -298,5 +298,65 @@
         "hash": "sha256-oLK5/oC7zYGmZH/xMQhzjPtILUgdgmzA4C9bNeXIjSw="
       }
     }
+  },
+  "bitstring": {
+    "version": "4.3.1",
+    "platforms": {
+      "x86_64-linux": {
+        "url": "https://files.pythonhosted.org/packages/75/2d/174566b533755ddf8efb32a5503af61c756a983de379f8ad3aed6a982d38/bitstring-4.3.1-py3-none-any.whl",
+        "name": "bitstring-4.3.1-py3-none-any.whl",
+        "hash": "sha256-adFYfwrBjcfZP8foDV9EcWGjPlcCfnJtwYoKi6zxcRo="
+      },
+      "aarch64-linux": {
+        "url": "https://files.pythonhosted.org/packages/75/2d/174566b533755ddf8efb32a5503af61c756a983de379f8ad3aed6a982d38/bitstring-4.3.1-py3-none-any.whl",
+        "name": "bitstring-4.3.1-py3-none-any.whl",
+        "hash": "sha256-adFYfwrBjcfZP8foDV9EcWGjPlcCfnJtwYoKi6zxcRo="
+      },
+      "aarch64-darwin": {
+        "url": "https://files.pythonhosted.org/packages/75/2d/174566b533755ddf8efb32a5503af61c756a983de379f8ad3aed6a982d38/bitstring-4.3.1-py3-none-any.whl",
+        "name": "bitstring-4.3.1-py3-none-any.whl",
+        "hash": "sha256-adFYfwrBjcfZP8foDV9EcWGjPlcCfnJtwYoKi6zxcRo="
+      }
+    }
+  },
+  "networkx": {
+    "version": "3.6.1",
+    "platforms": {
+      "x86_64-linux": {
+        "url": "https://files.pythonhosted.org/packages/9e/c9/b2622292ea83fbb4ec318f5b9ab867d0a28ab43c5717bb85b0a5f6b3b0a4/networkx-3.6.1-py3-none-any.whl",
+        "name": "networkx-3.6.1-py3-none-any.whl",
+        "hash": "sha256-1H+/MC59nLu54lVaDSZ5g9KqR2usMOkN++Vmm9V/N2I="
+      },
+      "aarch64-linux": {
+        "url": "https://files.pythonhosted.org/packages/9e/c9/b2622292ea83fbb4ec318f5b9ab867d0a28ab43c5717bb85b0a5f6b3b0a4/networkx-3.6.1-py3-none-any.whl",
+        "name": "networkx-3.6.1-py3-none-any.whl",
+        "hash": "sha256-1H+/MC59nLu54lVaDSZ5g9KqR2usMOkN++Vmm9V/N2I="
+      },
+      "aarch64-darwin": {
+        "url": "https://files.pythonhosted.org/packages/9e/c9/b2622292ea83fbb4ec318f5b9ab867d0a28ab43c5717bb85b0a5f6b3b0a4/networkx-3.6.1-py3-none-any.whl",
+        "name": "networkx-3.6.1-py3-none-any.whl",
+        "hash": "sha256-1H+/MC59nLu54lVaDSZ5g9KqR2usMOkN++Vmm9V/N2I="
+      }
+    }
+  },
+  "sympy": {
+    "version": "1.14.0",
+    "platforms": {
+      "x86_64-linux": {
+        "url": "https://files.pythonhosted.org/packages/a2/09/77d55d46fd61b4a135c444fc97158ef34a095e5681d0a6c10b75bf356191/sympy-1.14.0-py3-none-any.whl",
+        "name": "sympy-1.14.0-py3-none-any.whl",
+        "hash": "sha256-4JHMPpnSFBoLooRzKPVHmwXZSmY1y5YUjMs/NGcb2PU="
+      },
+      "aarch64-linux": {
+        "url": "https://files.pythonhosted.org/packages/a2/09/77d55d46fd61b4a135c444fc97158ef34a095e5681d0a6c10b75bf356191/sympy-1.14.0-py3-none-any.whl",
+        "name": "sympy-1.14.0-py3-none-any.whl",
+        "hash": "sha256-4JHMPpnSFBoLooRzKPVHmwXZSmY1y5YUjMs/NGcb2PU="
+      },
+      "aarch64-darwin": {
+        "url": "https://files.pythonhosted.org/packages/a2/09/77d55d46fd61b4a135c444fc97158ef34a095e5681d0a6c10b75bf356191/sympy-1.14.0-py3-none-any.whl",
+        "name": "sympy-1.14.0-py3-none-any.whl",
+        "hash": "sha256-4JHMPpnSFBoLooRzKPVHmwXZSmY1y5YUjMs/NGcb2PU="
+      }
+    }
   }
 }
