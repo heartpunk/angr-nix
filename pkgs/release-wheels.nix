@@ -41,10 +41,6 @@ in {
   protobuf = wheel "protobuf" [] "google.protobuf";
   pydemumble = wheel "pydemumble" [] "pydemumble";
   z3-solver = wheel "z3-solver" [] "z3";
-  angr = wheel "angr" (with pfinal; [
-    archinfo pyvex cle angr-data pypcode capstone networkx sympy cachetools
-    sortedcontainers protobuf psutil cffi pycparser rich gitpython lmdb
-    mulpyplexer msgspec pydemumble typing-extensions cxxheaderparser
-    platformdirs z3-solver
-  ]) "angr";
+  # Build the pinned release source to apply the public SMT exporter correction.
+  angr = pfinal.callPackage ./angr-source.nix { };
 }
