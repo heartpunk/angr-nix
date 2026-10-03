@@ -19,6 +19,9 @@ let
       pythonImportsCheck = [ importName ];
     };
 in {
+  bitstring = wheel "bitstring" [ pfinal.bitarray ] "bitstring";
+  networkx = wheel "networkx" [] "networkx";
+  sympy = wheel "sympy" [ pfinal.mpmath ] "sympy";
   mpmath = wheel "mpmath" [] "mpmath";
   cffi = wheel "cffi" [ pfinal.pycparser ] "cffi";
   archinfo = wheel "archinfo" [] "archinfo";
