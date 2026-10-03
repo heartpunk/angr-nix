@@ -15,6 +15,7 @@ let
       buildInputs = final.lib.optionals final.stdenv.isLinux [ final.stdenv.cc.cc.lib ];
       preFixup = final.lib.optionalString (final.stdenv.isLinux && name == "angr") ''
         addAutoPatchelfSearchPath ${pfinal.z3-solver}/${pfinal.python.sitePackages}/z3/lib
+        addAutoPatchelfSearchPath ${pfinal.pyvex}/${pfinal.python.sitePackages}/pyvex/lib
       '';
       pythonImportsCheck = [ importName ];
     };
