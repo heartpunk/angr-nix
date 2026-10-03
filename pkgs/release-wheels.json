@@ -358,5 +358,25 @@
         "hash": "sha256-4JHMPpnSFBoLooRzKPVHmwXZSmY1y5YUjMs/NGcb2PU="
       }
     }
+  },
+  "markdown-it-py": {
+    "version": "4.0.0",
+    "platforms": {
+      "x86_64-linux": {
+        "url": "https://files.pythonhosted.org/packages/94/54/e7d793b573f298e1c9013b8c4dade17d481164aa517d1d7148619c2cedbf/markdown_it_py-4.0.0-py3-none-any.whl",
+        "name": "markdown_it_py-4.0.0-py3-none-any.whl",
+        "hash": "sha256-hzJ8WbFyxQEYlgODU6gTQ7Z1RQCgjNeklzu0jG1XgUc="
+      },
+      "aarch64-linux": {
+        "url": "https://files.pythonhosted.org/packages/94/54/e7d793b573f298e1c9013b8c4dade17d481164aa517d1d7148619c2cedbf/markdown_it_py-4.0.0-py3-none-any.whl",
+        "name": "markdown_it_py-4.0.0-py3-none-any.whl",
+        "hash": "sha256-hzJ8WbFyxQEYlgODU6gTQ7Z1RQCgjNeklzu0jG1XgUc="
+      },
+      "aarch64-darwin": {
+        "url": "https://files.pythonhosted.org/packages/94/54/e7d793b573f298e1c9013b8c4dade17d481164aa517d1d7148619c2cedbf/markdown_it_py-4.0.0-py3-none-any.whl",
+        "name": "markdown_it_py-4.0.0-py3-none-any.whl",
+        "hash": "sha256-hzJ8WbFyxQEYlgODU6gTQ7Z1RQCgjNeklzu0jG1XgUc="
+      }
+    }
   }
 }
