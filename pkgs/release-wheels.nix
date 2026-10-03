@@ -19,6 +19,7 @@ let
       pythonImportsCheck = [ importName ];
     };
 in {
+  cffi = wheel "cffi" [ pfinal.pycparser ] "cffi";
   archinfo = wheel "archinfo" [] "archinfo";
   pyvex = wheel "pyvex" [ pfinal.cffi pfinal.bitstring ] "pyvex";
   cle = (wheel "cle" (with pfinal; [ archinfo pyvex pyxdia uefi-firmware pyelftools pefile sortedcontainers minidump pyxbe arpy cart ]) "cle").overridePythonAttrs {

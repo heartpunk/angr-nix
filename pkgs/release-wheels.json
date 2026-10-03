@@ -258,5 +258,25 @@
         "hash": "sha256-SGjuxCYCfydcJnAS/eXtC26V9AdflewhJ3ZEr3hYSfc="
       }
     }
+  },
+  "cffi": {
+    "version": "2.0.0",
+    "platforms": {
+      "x86_64-linux": {
+        "url": "https://files.pythonhosted.org/packages/78/2d/7fa73dfa841b5ac06c7b8855cfc18622132e365f5b81d02230333ff26e9e/cffi-2.0.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+        "name": "cffi-2.0.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+        "hash": "sha256-PhftU4JCM0v3CDJkSjKnquPYO1dWf5/WCiYlfpkrebo="
+      },
+      "aarch64-linux": {
+        "url": "https://files.pythonhosted.org/packages/d5/72/12b5f8d3865bf0f87cf1404d8c374e7487dcf097a1c91c436e72e6badd83/cffi-2.0.0-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.whl",
+        "name": "cffi-2.0.0-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.whl",
+        "hash": "sha256-sh4Ir2e4oQPHGiUEAceNXgiTvv914oxTyY9N5C93QGI="
+      },
+      "aarch64-darwin": {
+        "url": "https://files.pythonhosted.org/packages/df/a2/781b623f57358e360d62cdd7a8c681f074a71d445418a776eef0aadb4ab4/cffi-2.0.0-cp312-cp312-macosx_11_0_arm64.whl",
+        "name": "cffi-2.0.0-cp312-cp312-macosx_11_0_arm64.whl",
+        "hash": "sha256-jsoqgTwct61Pt002jC/7u0eJ03fuW7jfmDc8LMDe52w="
+      }
+    }
   }
 }
