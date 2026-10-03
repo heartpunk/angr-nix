@@ -1,0 +1,242 @@
+{
+  "angr": {
+    "version": "10.0.1",
+    "platforms": {
+      "x86_64-linux": {
+        "url": "https://files.pythonhosted.org/packages/8e/dd/cc4714731f51de06abf60a219dee7d65ed991f073a59c6e2c01148a18394/angr-10.0.1-cp312-abi3-manylinux_2_28_x86_64.whl",
+        "name": "angr-10.0.1-cp312-abi3-manylinux_2_28_x86_64.whl",
+        "hash": "sha256-lMAPYqjQC3Nuqbbom8PWK07wdG3X+cuh46u2bpmIWck="
+      },
+      "aarch64-linux": {
+        "url": "https://files.pythonhosted.org/packages/70/67/6691d2edef658070f6256d8a11b0aa1c1476397990fde21e746e8ea8a030/angr-10.0.1-cp312-abi3-manylinux_2_28_aarch64.whl",
+        "name": "angr-10.0.1-cp312-abi3-manylinux_2_28_aarch64.whl",
+        "hash": "sha256-EXNbCJ2DDj9Gb32WqfWAVZ9Y44d1dhuPorRT1+IThUI="
+      },
+      "aarch64-darwin": {
+        "url": "https://files.pythonhosted.org/packages/e1/cf/352788812e55f64e59c914a58ddfbab4de9730b6c5ae3996003fdb6c56b7/angr-10.0.1-cp312-abi3-macosx_11_0_arm64.whl",
+        "name": "angr-10.0.1-cp312-abi3-macosx_11_0_arm64.whl",
+        "hash": "sha256-hULnZg6QgXXXncO61DmR5UxhiBx76T2Nwwi/ZbxK2Q8="
+      }
+    }
+  },
+  "archinfo": {
+    "version": "10.0.1",
+    "platforms": {
+      "x86_64-linux": {
+        "url": "https://files.pythonhosted.org/packages/ca/22/ec50836a9fe3f73186e939cae8dc4230652335c20694b64b24ca4b610486/archinfo-10.0.1-py3-none-any.whl",
+        "name": "archinfo-10.0.1-py3-none-any.whl",
+        "hash": "sha256-A+56FYnKjKlZ3Zlj1MS7HHuHz4+chOuQmtP6utYu1pc="
+      },
+      "aarch64-linux": {
+        "url": "https://files.pythonhosted.org/packages/ca/22/ec50836a9fe3f73186e939cae8dc4230652335c20694b64b24ca4b610486/archinfo-10.0.1-py3-none-any.whl",
+        "name": "archinfo-10.0.1-py3-none-any.whl",
+        "hash": "sha256-A+56FYnKjKlZ3Zlj1MS7HHuHz4+chOuQmtP6utYu1pc="
+      },
+      "aarch64-darwin": {
+        "url": "https://files.pythonhosted.org/packages/ca/22/ec50836a9fe3f73186e939cae8dc4230652335c20694b64b24ca4b610486/archinfo-10.0.1-py3-none-any.whl",
+        "name": "archinfo-10.0.1-py3-none-any.whl",
+        "hash": "sha256-A+56FYnKjKlZ3Zlj1MS7HHuHz4+chOuQmtP6utYu1pc="
+      }
+    }
+  },
+  "pyvex": {
+    "version": "10.0.1",
+    "platforms": {
+      "x86_64-linux": {
+        "url": "https://files.pythonhosted.org/packages/c0/35/28400149448b827a2b087d7d5a7cd0c84080131cff4c24cdf7f2505ff793/pyvex-10.0.1-cp312-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+        "name": "pyvex-10.0.1-cp312-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+        "hash": "sha256-3tdQFcR+5hm1fs81SVuNHp5BElzuAIAVFu28dRF4l34="
+      },
+      "aarch64-linux": {
+        "url": "https://files.pythonhosted.org/packages/ca/fe/b1fbaeaee5a60bd65afd8efacbdef015c96844003c496c06e39de5719313/pyvex-10.0.1-cp312-abi3-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+        "name": "pyvex-10.0.1-cp312-abi3-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+        "hash": "sha256-0FSbunldCGytMJccIdLyBM1/sK67g8iarSz4vuO4vI4="
+      },
+      "aarch64-darwin": {
+        "url": "https://files.pythonhosted.org/packages/43/0e/ac8eae6dc8a55ee60c5b7ede748b6654afd5d602e96ccf8fc276c41952c2/pyvex-10.0.1-cp312-abi3-macosx_11_0_arm64.whl",
+        "name": "pyvex-10.0.1-cp312-abi3-macosx_11_0_arm64.whl",
+        "hash": "sha256-EFjsW8xRnUtJev5M3A+eqft7TtX7lnBj0UyDJK0zTQ4="
+      }
+    }
+  },
+  "cle": {
+    "version": "10.0.1",
+    "platforms": {
+      "x86_64-linux": {
+        "url": "https://files.pythonhosted.org/packages/32/5f/c2b4471897954056c7fa5c32a687e9779a7a73b4297987e10075db970e32/cle-10.0.1-py3-none-any.whl",
+        "name": "cle-10.0.1-py3-none-any.whl",
+        "hash": "sha256-uxbIIhkJ/eqhvmAwS3FXsalE8pJPSBV/DN/dvtZF134="
+      },
+      "aarch64-linux": {
+        "url": "https://files.pythonhosted.org/packages/32/5f/c2b4471897954056c7fa5c32a687e9779a7a73b4297987e10075db970e32/cle-10.0.1-py3-none-any.whl",
+        "name": "cle-10.0.1-py3-none-any.whl",
+        "hash": "sha256-uxbIIhkJ/eqhvmAwS3FXsalE8pJPSBV/DN/dvtZF134="
+      },
+      "aarch64-darwin": {
+        "url": "https://files.pythonhosted.org/packages/32/5f/c2b4471897954056c7fa5c32a687e9779a7a73b4297987e10075db970e32/cle-10.0.1-py3-none-any.whl",
+        "name": "cle-10.0.1-py3-none-any.whl",
+        "hash": "sha256-uxbIIhkJ/eqhvmAwS3FXsalE8pJPSBV/DN/dvtZF134="
+      }
+    }
+  },
+  "angr-data": {
+    "version": "0.1.1",
+    "platforms": {
+      "x86_64-linux": {
+        "url": "https://files.pythonhosted.org/packages/fd/ab/4e3cc19a1cf9faef131372a68712e7747103c64b4f692441007eda5424e7/angr_data-0.1.1-py3-none-any.whl",
+        "name": "angr_data-0.1.1-py3-none-any.whl",
+        "hash": "sha256-4p/ZeFQiyedbh+duQlplukTMvV1hGiTXfV3an3Rp4SY="
+      },
+      "aarch64-linux": {
+        "url": "https://files.pythonhosted.org/packages/fd/ab/4e3cc19a1cf9faef131372a68712e7747103c64b4f692441007eda5424e7/angr_data-0.1.1-py3-none-any.whl",
+        "name": "angr_data-0.1.1-py3-none-any.whl",
+        "hash": "sha256-4p/ZeFQiyedbh+duQlplukTMvV1hGiTXfV3an3Rp4SY="
+      },
+      "aarch64-darwin": {
+        "url": "https://files.pythonhosted.org/packages/fd/ab/4e3cc19a1cf9faef131372a68712e7747103c64b4f692441007eda5424e7/angr_data-0.1.1-py3-none-any.whl",
+        "name": "angr_data-0.1.1-py3-none-any.whl",
+        "hash": "sha256-4p/ZeFQiyedbh+duQlplukTMvV1hGiTXfV3an3Rp4SY="
+      }
+    }
+  },
+  "pypcode": {
+    "version": "4.0.0",
+    "platforms": {
+      "x86_64-linux": {
+        "url": "https://files.pythonhosted.org/packages/2a/88/bb0e611dad34e60a12fe84efe1d5ea87cb301f68dcbd45a131a591b11b54/pypcode-4.0.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+        "name": "pypcode-4.0.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+        "hash": "sha256-5HMjCJURf2g2KfjdZMYw1o1CRrW/zhnjtJsi1vRLomY="
+      },
+      "aarch64-linux": {
+        "url": "https://files.pythonhosted.org/packages/8f/02/69835bd082500144276c406a72fcf548bf44fa25e90a37e353579f8ae069/pypcode-4.0.0-cp312-cp312-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl",
+        "name": "pypcode-4.0.0-cp312-cp312-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl",
+        "hash": "sha256-RZGEGTOCRPXTh3ztsvJkQ8QPZffCfoygecovUAUzW1A="
+      },
+      "aarch64-darwin": {
+        "url": "https://files.pythonhosted.org/packages/08/b6/a1b33f81da22caaf5a77c7809b31b5f814666b396d305f1104d9a1084e32/pypcode-4.0.0-cp312-cp312-macosx_11_0_arm64.whl",
+        "name": "pypcode-4.0.0-cp312-cp312-macosx_11_0_arm64.whl",
+        "hash": "sha256-uyf+IuWk+Pn5Mfq6hxAAI79SQjpXv263mAdCYdtx9DA="
+      }
+    }
+  },
+  "capstone": {
+    "version": "5.0.9",
+    "platforms": {
+      "x86_64-linux": {
+        "url": "https://files.pythonhosted.org/packages/d1/39/17747862222bb062e86b501f1f148d5ff589b77908b080d30f7f085cbfb7/capstone-5.0.9-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+        "name": "capstone-5.0.9-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+        "hash": "sha256-Jz/Y10fS41yI+RRQvlGmA+z6r7ANltnzFdy4aJyGGT4="
+      },
+      "aarch64-linux": {
+        "url": "https://files.pythonhosted.org/packages/45/d9/dbeadb9fcd461e608ce79b1cb647fed6baa812fa6e1c68b0ba5ef81291af/capstone-5.0.9-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+        "name": "capstone-5.0.9-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+        "hash": "sha256-QXcq0McapdPpfVQegCWTwucfuUrH4g1CAvl84qPrjtU="
+      },
+      "aarch64-darwin": {
+        "url": "https://files.pythonhosted.org/packages/da/f3/43f4dbfc36c7740d512621a9d42b276ac21bb6ca7cb974d4c8a19060d387/capstone-5.0.9-py3-none-macosx_10_9_universal2.whl",
+        "name": "capstone-5.0.9-py3-none-macosx_10_9_universal2.whl",
+        "hash": "sha256-WKh02abLFRIhNbE4WnguW1TIpNk5YWG2SYRlBG0uBEI="
+      }
+    }
+  },
+  "lmdb": {
+    "version": "2.1.1",
+    "platforms": {
+      "x86_64-linux": {
+        "url": "https://files.pythonhosted.org/packages/d4/6d/2d82900a45943b5c682a96edabd0b07b2ad14ef90d6d0358ed0e9d9164aa/lmdb-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+        "name": "lmdb-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+        "hash": "sha256-/7BQKd34Bq5qii06QOv/EaHTNskJi0/pNJ1asCQ8xTQ="
+      },
+      "aarch64-linux": {
+        "url": "https://files.pythonhosted.org/packages/02/a3/d35b03946f9d890728d789fc6755b381ccebb478e603b7df7d43dcab97d8/lmdb-2.1.1-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+        "name": "lmdb-2.1.1-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+        "hash": "sha256-tQxvX25O8I1S3JQF/3g2Wgarl4EtM1RnUL5gBKYgITY="
+      },
+      "aarch64-darwin": {
+        "url": "https://files.pythonhosted.org/packages/b7/04/4f5fa29e8426ae3d1611a65be7298534e81761bf35672d1e361f966155b7/lmdb-2.1.1-cp312-cp312-macosx_11_0_arm64.whl",
+        "name": "lmdb-2.1.1-cp312-cp312-macosx_11_0_arm64.whl",
+        "hash": "sha256-Z/4Hel1vvTwlZhQ44vAEc0I17jRYBY8J9pVT++v4orI="
+      }
+    }
+  },
+  "pycparser": {
+    "version": "3.0",
+    "platforms": {
+      "x86_64-linux": {
+        "url": "https://files.pythonhosted.org/packages/0c/c3/44f3fbbfa403ea2a7c779186dc20772604442dde72947e7d01069cbe98e3/pycparser-3.0-py3-none-any.whl",
+        "name": "pycparser-3.0-py3-none-any.whl",
+        "hash": "sha256-tydBQWmja31STBw+MYOaUhclB417L/A4ZWhEJmFgqZI="
+      },
+      "aarch64-linux": {
+        "url": "https://files.pythonhosted.org/packages/0c/c3/44f3fbbfa403ea2a7c779186dc20772604442dde72947e7d01069cbe98e3/pycparser-3.0-py3-none-any.whl",
+        "name": "pycparser-3.0-py3-none-any.whl",
+        "hash": "sha256-tydBQWmja31STBw+MYOaUhclB417L/A4ZWhEJmFgqZI="
+      },
+      "aarch64-darwin": {
+        "url": "https://files.pythonhosted.org/packages/0c/c3/44f3fbbfa403ea2a7c779186dc20772604442dde72947e7d01069cbe98e3/pycparser-3.0-py3-none-any.whl",
+        "name": "pycparser-3.0-py3-none-any.whl",
+        "hash": "sha256-tydBQWmja31STBw+MYOaUhclB417L/A4ZWhEJmFgqZI="
+      }
+    }
+  },
+  "protobuf": {
+    "version": "6.33.0",
+    "platforms": {
+      "x86_64-linux": {
+        "url": "https://files.pythonhosted.org/packages/21/51/0b1cbad62074439b867b4e04cc09b93f6699d78fd191bed2bbb44562e077/protobuf-6.33.0-cp39-abi3-manylinux2014_x86_64.whl",
+        "name": "protobuf-6.33.0-cp39-abi3-manylinux2014_x86_64.whl",
+        "hash": "sha256-Nb5J/T9P76Tm4qrMNei4N9ZwPDeiFopVrCHpsbx1We8="
+      },
+      "aarch64-linux": {
+        "url": "https://files.pythonhosted.org/packages/10/35/16d31e0f92c6d2f0e77c2a3ba93185130ea13053dd16200a57434c882f2b/protobuf-6.33.0-cp39-abi3-manylinux2014_aarch64.whl",
+        "name": "protobuf-6.33.0-cp39-abi3-manylinux2014_aarch64.whl",
+        "hash": "sha256-4Gl+zjU+Yjm5DuQ6kjExgwKtg1PHDm5FSZ+lI5bev5A="
+      },
+      "aarch64-darwin": {
+        "url": "https://files.pythonhosted.org/packages/e1/a9/b6eee662a6951b9c3640e8e452ab3e09f117d99fc10baa32d1581a0d4099/protobuf-6.33.0-cp39-abi3-macosx_10_9_universal2.whl",
+        "name": "protobuf-6.33.0-cp39-abi3-macosx_10_9_universal2.whl",
+        "hash": "sha256-kFsHpl8aS3JBIxQILH2/rpGp6LaKDMFXdRX431js9FU="
+      }
+    }
+  },
+  "pydemumble": {
+    "version": "0.1.3",
+    "platforms": {
+      "x86_64-linux": {
+        "url": "https://files.pythonhosted.org/packages/16/5a/ea058dd1be9866fee84f6a89c1429c5236a3e15a1add89db5043028c7dd4/pydemumble-0.1.3-cp312-abi3-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl",
+        "name": "pydemumble-0.1.3-cp312-abi3-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl",
+        "hash": "sha256-U6Cf8mqqd051xFwTy9VlAQc/l0krV1T2lHgRnT047gE="
+      },
+      "aarch64-linux": {
+        "url": "https://files.pythonhosted.org/packages/dd/01/49689bd6f94f4d34e5dbcf2396c8b721c3d531708aa169ee1c5522b84471/pydemumble-0.1.3-cp312-abi3-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl",
+        "name": "pydemumble-0.1.3-cp312-abi3-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl",
+        "hash": "sha256-LMbafrM697sWvUYE/ZbHVs/E+0bhcjT/L1FKHxPwRZA="
+      },
+      "aarch64-darwin": {
+        "url": "https://files.pythonhosted.org/packages/fe/15/8d75bb14abfb459e661f5d434d47f59c1dbb5f35f5db1fa9da4b8bfeebd5/pydemumble-0.1.3-cp312-abi3-macosx_11_0_arm64.whl",
+        "name": "pydemumble-0.1.3-cp312-abi3-macosx_11_0_arm64.whl",
+        "hash": "sha256-95m2ygKCl4B+BqpePFJKrmxYfA+j8kWtKHrP+bVZdnM="
+      }
+    }
+  },
+  "z3-solver": {
+    "version": "5.1.0.0",
+    "platforms": {
+      "x86_64-linux": {
+        "url": "https://files.pythonhosted.org/packages/34/de/30329041d9a2dda11308576a80b5db17060e4b03a7ba7f550437fb38dd6b/z3_solver-5.1.0.0-py3-none-manylinux_2_27_x86_64.whl",
+        "name": "z3_solver-5.1.0.0-py3-none-manylinux_2_27_x86_64.whl",
+        "hash": "sha256-362eMJ1wELH/a9sz8hVwoWA+9HJzcyIccRenREjwz+8="
+      },
+      "aarch64-linux": {
+        "url": "https://files.pythonhosted.org/packages/ec/49/7db70c39fefde52eb5571ae709fa370260536439082d36b9ed1ab36bd1a0/z3_solver-5.1.0.0-py3-none-manylinux_2_38_aarch64.whl",
+        "name": "z3_solver-5.1.0.0-py3-none-manylinux_2_38_aarch64.whl",
+        "hash": "sha256-Hc/My0sCeVHXrfJntbI256Z7hDPMNY2ALcsCgBUVh78="
+      },
+      "aarch64-darwin": {
+        "url": "https://files.pythonhosted.org/packages/01/9a/cdb6db09d6aff6a803a94505aa24666db5e47df7aad0f2b1b0ddcb52ed12/z3_solver-5.1.0.0-py3-none-macosx_13_0_arm64.whl",
+        "name": "z3_solver-5.1.0.0-py3-none-macosx_13_0_arm64.whl",
+        "hash": "sha256-OZo4qF14QQXl31oFwEpYFIG/24CvdCR3nPdvqEO05mw="
+      }
+    }
+  }
+}
