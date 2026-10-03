@@ -38,6 +38,8 @@ in {
   capstone = wheel "capstone" [] "capstone";
   lmdb = wheel "lmdb" [] "lmdb";
   pycparser = wheel "pycparser" [] "pycparser";
+  grpcio = wheel "grpcio" [ pfinal.typing-extensions ] "grpc";
+  grpcio-tools = wheel "grpcio-tools" [ pfinal.grpcio pfinal.protobuf pfinal.setuptools ] "grpc_tools";
   protobuf = wheel "protobuf" [] "google.protobuf";
   pydemumble = wheel "pydemumble" [] "pydemumble";
   z3-solver = wheel "z3-solver" [] "z3";

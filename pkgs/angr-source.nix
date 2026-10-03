@@ -4,7 +4,6 @@
   fetchPypi,
   setuptools,
   setuptools-rust,
-  pythonRelaxDepsHook,
   rustPlatform,
   cargo,
   rustc,
@@ -64,7 +63,6 @@ buildPythonPackage rec {
   ];
 
   nativeBuildInputs = [
-    pythonRelaxDepsHook
     rustPlatform.cargoSetupHook
     cargo
     rustc
@@ -72,7 +70,6 @@ buildPythonPackage rec {
   ] ++ lib.optionals stdenv.isLinux [ autoPatchelfHook
   ];
 
-  pythonRelaxDeps = [ "grpcio-tools" ];
   buildInputs = [ stdenv.cc.cc.lib ];
   preFixup = lib.optionalString stdenv.isLinux ''
     addAutoPatchelfSearchPath ${z3-solver}/${z3-solver.pythonModule.sitePackages}/z3/lib
