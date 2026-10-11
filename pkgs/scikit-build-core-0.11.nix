@@ -18,6 +18,7 @@
   setuptools,
   virtualenv,
   wheel,
+  runTests ? false,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -53,7 +54,9 @@ buildPythonPackage (finalAttrs: {
     pathspec
   ];
 
-  nativeCheckInputs = [
+  doCheck = runTests;
+
+  nativeCheckInputs = lib.optionals runTests [
     build
     cattrs
     cmake
