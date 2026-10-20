@@ -20,12 +20,6 @@ let
       pythonImportsCheck = [ importName ];
     };
 in {
-  markdown-it-py = wheel "markdown-it-py" [ pfinal.mdurl ] "markdown_it";
-  bitstring = wheel "bitstring" [ pfinal.bitarray ] "bitstring";
-  networkx = wheel "networkx" [] "networkx";
-  sympy = wheel "sympy" [ pfinal.mpmath ] "sympy";
-  mpmath = wheel "mpmath" [] "mpmath";
-  cffi = wheel "cffi" [ pfinal.pycparser ] "cffi";
   archinfo = wheel "archinfo" [] "archinfo";
   pyvex = wheel "pyvex" [ pfinal.cffi pfinal.bitstring ] "pyvex";
   cle = (wheel "cle" (with pfinal; [ archinfo pyvex pyxdia uefi-firmware pyelftools pefile sortedcontainers minidump pyxbe arpy cart ]) "cle").overridePythonAttrs {
@@ -35,10 +29,7 @@ in {
   uefi-firmware = wheel "uefi-firmware" [ pfinal.future ] "uefi_firmware";
   angr-data = wheel "angr-data" [] "angr_data";
   pypcode = wheel "pypcode" [] "pypcode";
-  capstone = wheel "capstone" [] "capstone";
   lmdb = wheel "lmdb" [] "lmdb";
-  pycparser = wheel "pycparser" [] "pycparser";
-  grpcio = wheel "grpcio" [ pfinal.typing-extensions ] "grpc";
   grpcio-tools = wheel "grpcio-tools" [ pfinal.grpcio pfinal.protobuf pfinal.setuptools ] "grpc_tools";
   protobuf = wheel "protobuf" [] "google.protobuf";
   pydemumble = wheel "pydemumble" [] "pydemumble";
