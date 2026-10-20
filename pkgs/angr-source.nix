@@ -68,8 +68,7 @@ buildPythonPackage rec {
     cargo
     rustc
     gnumake
-  ] ++ lib.optionals stdenv.isLinux [ autoPatchelfHook
-  ];
+  ] ++ lib.optionals stdenv.isLinux [ autoPatchelfHook ];
 
   buildInputs = [ stdenv.cc.cc.lib ];
   preFixup = lib.optionalString stdenv.isLinux ''
