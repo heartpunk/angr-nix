@@ -1,5 +1,5 @@
-# Prototype packaging of unmodified upstream release wheels. Sources and hashes
-# are pinned per platform; no local patches or private Claripy implementation.
+# Required upstream release wheels, pinned by platform and hash.
+# Angr itself is built from source below with the SMT exporter correction.
 { final, pfinal, pprev }:
 let
   releases = builtins.fromJSON (builtins.readFile ./release-wheels.json);
@@ -13,10 +13,6 @@ let
       inherit dependencies;
       nativeBuildInputs = final.lib.optionals final.stdenv.isLinux [ final.autoPatchelfHook ];
       buildInputs = final.lib.optionals final.stdenv.isLinux [ final.stdenv.cc.cc.lib ];
-      preFixup = final.lib.optionalString (final.stdenv.isLinux && name == "angr") ''
-        addAutoPatchelfSearchPath ${pfinal.z3-solver}/${pfinal.python.sitePackages}/z3/lib
-        addAutoPatchelfSearchPath ${pfinal.pyvex}/${pfinal.python.sitePackages}/pyvex/lib
-      '';
       pythonImportsCheck = [ importName ];
     };
 in {
