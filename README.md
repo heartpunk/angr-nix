@@ -1,9 +1,9 @@
 # angr-nix
 
 Nix flake packaging for [angr](https://github.com/angr/angr) 10.0.1, a binary analysis framework.
-The Angr 10 package and its native/runtime dependencies use pinned upstream release
-wheels; Nix supplies the Python 3.12 environment and the libraries needed to load
-the native extensions.
+Angr is built from pinned upstream source with an SMT-LIB floating-point export
+correction. Dependencies use stock Nixpkgs packages where compatible; required
+version overrides use pinned upstream wheels or source.
 
 ## Usage
 
@@ -54,18 +54,17 @@ Core runtime packages provided by this flake:
 
 | Package | Version | Notes |
 |---------|---------|-------|
-| angr | 10.0.1 | Official upstream wheel |
+| angr | 10.0.1 | Upstream source with the FP SMT export correction |
 | cle | 10.0.1 | Binary loader; official upstream wheel |
 | pyvex | 10.0.1 | VEX IR lifter; official upstream wheel |
 | archinfo | 10.0.1 | Architecture definitions; official upstream wheel |
 | angr-data | 0.1.1 | Runtime data required by Angr 10 |
 | pypcode | 4.0.0 | SLEIGH disassembler; official upstream wheel |
 | z3-solver | 5.1.0.0 | Solver runtime; official upstream wheel |
-| claripy | 9.2.214 | Separately exposed legacy package; not in the Angr 10 dependency closure and not yet checked for Angr 10 compatibility |
 
-Other runtime wheels and their hashes are pinned in `pkgs/release-wheels.json`.
-The overlay also retains source-built packages for consumers that are not replaced
-by the release-wheel set.
+Wheel URLs and hashes are recorded in `pkgs/release-wheels.json`;
+`pkgs/release-wheels.nix` selects the active overrides. Angr 10 supplies its own
+Claripy implementation. The overlay does not override standalone Claripy.
 
 ## Platforms
 
@@ -73,9 +72,8 @@ by the release-wheel set.
 - `aarch64-linux`
 - `aarch64-darwin` (Apple Silicon)
 
-The release-wheel closure pins its runtime packages rather than relaxing
-Angr 9 package constraints against nixpkgs. The separately exposed legacy
-Claripy and source-built packages retain their own existing dependency rules.
+The overlay retains Angr 10 version requirements while reusing ordinary Nixpkgs
+packaging. CLE retains the existing `arpy` dependency relaxation.
 
 ## License
 
