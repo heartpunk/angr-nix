@@ -4,13 +4,12 @@
   fetchPypi,
   setuptools,
   setuptools-rust,
-  pythonRelaxDepsHook,
   rustPlatform,
   cargo,
   rustc,
+  angr-data,
   archinfo,
   pyvex,
-  claripy,
   cle,
   pypcode,
   capstone,
@@ -25,51 +24,62 @@
   rich,
   gitpython,
   lmdb,
-  pycryptodome,
   mulpyplexer,
   msgspec,
   pydemumble,
   typing-extensions,
   cxxheaderparser,
   gnumake,
+  grpcio-tools,
+  z3-solver,
+  platformdirs,
+  autoPatchelfHook,
+  stdenv,
 }:
 
 buildPythonPackage rec {
   pname = "angr";
-  version = "9.2.214";
+  version = "10.0.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-umCAv9Gxz1/LNFCMbV4XSq5PgkFsJdwodI3I5UJtiRU=";
+    hash = "sha256-CCpzJGP+/ZK107+Nnp/ERYtIzw6MlPgPJ30lX8sjKNk=";
   };
+
+  patches = [ ../patches/fp-smt-significand.patch ];
 
   cargoDeps = rustPlatform.fetchCargoVendor {
     inherit src;
     name = "${pname}-${version}";
-    hash = "sha256-WPMBFVb+D8eWkF25doTYcFM7s8XRgkoaHXL0rtLwoqk=";
+    hash = "sha256-EVTtVUdkZGN8VF8fHGzWSkR7F2Q09ItPaLjzjyJRLFs=";
   };
 
   build-system = [
     setuptools
     setuptools-rust
+    grpcio-tools
+    pyvex
+    z3-solver
   ];
 
   nativeBuildInputs = [
-    pythonRelaxDepsHook
     rustPlatform.cargoSetupHook
     cargo
     rustc
     gnumake
-  ];
+  ] ++ lib.optionals stdenv.isLinux [ autoPatchelfHook ];
 
-  # capstone: nixpkgs 5.0.7 vs pinned 5.0.6
-  pythonRelaxDeps = [ "capstone" ];
+  buildInputs = [ stdenv.cc.cc.lib ];
+  preFixup = lib.optionalString stdenv.isLinux ''
+    addAutoPatchelfSearchPath ${z3-solver}/${z3-solver.pythonModule.sitePackages}/z3/lib
+    addAutoPatchelfSearchPath ${pyvex}/${pyvex.pythonModule.sitePackages}/pyvex/lib
+  '';
 
   dependencies = [
+    angr-data
     archinfo
     pyvex
-    claripy
     cle
     pypcode
     capstone
@@ -84,12 +94,13 @@ buildPythonPackage rec {
     rich
     gitpython
     lmdb
-    pycryptodome
     mulpyplexer
     msgspec
     pydemumble
     typing-extensions
     cxxheaderparser
+    platformdirs
+    z3-solver
   ];
 
   pythonImportsCheck = [ "angr" ];
