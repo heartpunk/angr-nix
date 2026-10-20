@@ -19,7 +19,6 @@ in {
   archinfo = wheel "archinfo" [] "archinfo";
   pyvex = wheel "pyvex" [ pfinal.cffi pfinal.bitstring ] "pyvex";
   cle = (wheel "cle" (with pfinal; [ archinfo pyvex pyxdia uefi-firmware pyelftools pefile sortedcontainers minidump pyxbe arpy cart ]) "cle").overridePythonAttrs {
-    nativeBuildInputs = [ pprev.pythonRelaxDepsHook ];
     pythonRelaxDeps = [ "arpy" ];
   };
   uefi-firmware = wheel "uefi-firmware" [ pfinal.future ] "uefi_firmware";
