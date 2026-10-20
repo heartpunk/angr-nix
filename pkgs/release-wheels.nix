@@ -25,6 +25,8 @@ in {
   angr-data = wheel "angr-data" [] "angr_data";
   pypcode = wheel "pypcode" [] "pypcode";
   lmdb = wheel "lmdb" [] "lmdb";
+  grpcio-tools = wheel "grpcio-tools" [ pfinal.grpcio pfinal.protobuf pfinal.setuptools ] "grpc_tools";
+  protobuf = wheel "protobuf" [] "google.protobuf";
   pydemumble = wheel "pydemumble" [] "pydemumble";
   z3-solver = wheel "z3-solver" [] "z3";
   # Build the pinned release source to apply the public SMT exporter correction.
